@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiMFa FG Supervisor (Focused Gadget)", "MiMFa FG Supervisor (Focused Gadget).csproj", "{ABFD13DB-D3FC-4688-81F2-954881092159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiMFa Framework", "..\..\Technology\MiMFa Framework\MiMFa Framework\Core\MiMFa Framework.csproj", "{ADC72CD2-885E-442A-983E-0BA87B7234EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiMFa Framework.Support", "..\..\Technology\MiMFa Framework\MiMFa Framework\Support\MiMFa Framework.Support.csproj", "{F5B9F311-633B-45CD-B9AC-8C60DA866487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToWeb", "..\MiMFa DesktopToWeb\ExcelToWeb.csproj", "{783C573E-A50B-4821-8D5F-C37F579B9065}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABFD13DB-D3FC-4688-81F2-954881092159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFD13DB-D3FC-4688-81F2-954881092159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFD13DB-D3FC-4688-81F2-954881092159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFD13DB-D3FC-4688-81F2-954881092159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC72CD2-885E-442A-983E-0BA87B7234EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC72CD2-885E-442A-983E-0BA87B7234EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC72CD2-885E-442A-983E-0BA87B7234EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC72CD2-885E-442A-983E-0BA87B7234EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B9F311-633B-45CD-B9AC-8C60DA866487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B9F311-633B-45CD-B9AC-8C60DA866487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B9F311-633B-45CD-B9AC-8C60DA866487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B9F311-633B-45CD-B9AC-8C60DA866487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{783C573E-A50B-4821-8D5F-C37F579B9065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783C573E-A50B-4821-8D5F-C37F579B9065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783C573E-A50B-4821-8D5F-C37F579B9065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783C573E-A50B-4821-8D5F-C37F579B9065}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

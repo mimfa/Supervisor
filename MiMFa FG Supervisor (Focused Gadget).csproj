@@ -7,11 +7,12 @@
     <ProjectGuid>{ABFD13DB-D3FC-4688-81F2-954881092159}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TadarokDesktopToWeb</RootNamespace>
-    <AssemblyName>TadarokDesktopToWeb</AssemblyName>
+    <RootNamespace>MiMFa_Supervisor</RootNamespace>
+    <AssemblyName>MiMFa FocusedGadget Supervisor %28FGS%29</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,10 +33,19 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MiMFa Focused Gadget.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="API.cs" />
+    <Compile Include="Compute\Connector.cs" />
+    <Compile Include="Infra\Service.cs" />
+    <Compile Include="Model\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MiMFa Supervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiMFa Supervisor.Designer.cs">
+      <DependentUpon>MiMFa Supervisor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +77,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="MiMFa Supervisor.resx">
+      <DependentUpon>MiMFa Supervisor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +94,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MiMFa Focused Gadget.ico" />
+    <Content Include="MiMFa.ico" />
+    <None Include="Resources\stop-black.png" />
+    <None Include="Resources\right-black.png" />
+    <None Include="Resources\pause-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Technology\MiMFa Framework\MiMFa Framework\Core\MiMFa Framework.csproj">
+      <Project>{adc72cd2-885e-442a-983e-0ba87b7234ef}</Project>
+      <Name>MiMFa Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Technology\MiMFa Framework\MiMFa Framework\Support\MiMFa Framework.Support.csproj">
+      <Project>{f5b9f311-633b-45cd-b9ac-8c60da866487}</Project>
+      <Name>MiMFa Framework.Support</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

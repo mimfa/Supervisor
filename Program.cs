@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TadarokDesktopToWeb
+namespace MiMFa_Supervisor
 {
     static class Program
     {
@@ -14,9 +13,13 @@ namespace TadarokDesktopToWeb
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Supervisor());
+            }
+            catch(Exception ex) { if (MessageBox.Show(ex.Message, "Apllication is Closing [0]", MessageBoxButtons.RetryCancel, MessageBoxIcon.Stop) == DialogResult.Retry) Main(); }
         }
     }
 }
